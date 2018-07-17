@@ -13,8 +13,8 @@ import { DOCUMENT } from '@angular/common';
             <th id="childHeader" *ngIf="childRows" class="child-spacer">
               <span class="screen-reader">Details</span>
             </th>
-            <th class="header-buttons" [ngClass]="{'right': column.alignRight }"
-                *ngFor="let column of columns; let i = index; let f = first; let l = last;" 
+            <th class="header-buttons" [ngClass]="{'right': column.alignRight }" scope="col"
+                *ngFor="let column of columns; let i = index; let f = first; let l = last;"
                 [attr.id]="column.property"
                 [attr.aria-sort]="(!sortable || column.unsortable) ? null : (!column.sortType || column.sortType === 0) ? 'none' : column.sortType === 1 ? 'ascending' : 'descending'">
                 <button *ngIf="columnOrdering && !f" (click)="moveColumnBackward(i, column)" type="button" class="ordering-button fa fa-angle-left" [id]="column.property + '-left'">

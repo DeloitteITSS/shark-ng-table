@@ -31,11 +31,11 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-dist/bundles/
-dist/src/
-dist/README.md
-dist/*.css
-dist/fonts/
+# dist/bundles/
+# dist/src/
+# dist/README.md
+# dist/*.css
+# dist/fonts/
 
 # Dependency directories
 node_modules/
