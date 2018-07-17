@@ -13,7 +13,7 @@ var SharkTableHeaderButtonComponent = (function () {
     SharkTableHeaderButtonComponent.decorators = [
         { type: Component, args: [{
                     selector: 'shark-table-header-button',
-                    template: "\n    <span class=\"header-text pointer\" (click)=\"changeSort()\" (keyup.enter)=\"changeSort()\">{{ column.header }}</span>\n    <button class=\"sort-button\" [name]=\"column.header\" (click)=\"changeSort()\" type=\"button\" aria-label=\"Change Sorting\">\n      <i class=\"sorting fas fa-fw\" [ngClass]=\"{\n        'unsorted': !column.sortType || column.sortType === 0,\n        'fa-sort': !column.sortType || column.sortType === 0,\n        'asc': column.sortType === 1,\n        'fa-sort-up': column.sortType === 1,\n        'desc': column.sortType === 2,\n        'fa-sort-down': column.sortType === 2\n      }\"></i>\n    </button>\n  "
+                    template: "\n    <span class=\"header-text pointer\" (click)=\"changeSort()\" (keyup.enter)=\"changeSort()\">{{ column.header }}</span>\n    <button class=\"sort-button\" [name]=\"column.header\" (click)=\"changeSort()\" type=\"button\"\n    [aria-label]=\"'Change Sorting ' + column.header\">\n      <i class=\"sorting fas fa-fw\" [ngClass]=\"{\n        'unsorted': !column.sortType || column.sortType === 0,\n        'fa-sort': !column.sortType || column.sortType === 0,\n        'asc': column.sortType === 1,\n        'fa-sort-up': column.sortType === 1,\n        'desc': column.sortType === 2,\n        'fa-sort-down': column.sortType === 2\n      }\"></i>\n    </button>\n  "
                 },] },
     ];
     /** @nocollapse */
